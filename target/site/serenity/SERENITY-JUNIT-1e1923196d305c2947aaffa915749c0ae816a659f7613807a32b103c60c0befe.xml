@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="prueba Sophos flujo 1" skipped="0" tests="2" time="44.41" timestamp="2022-09-02 11:56:34"><testcase name="agregar registro en la tabla"/><testcase name="eliminar registro en la tabla"/></testsuite>

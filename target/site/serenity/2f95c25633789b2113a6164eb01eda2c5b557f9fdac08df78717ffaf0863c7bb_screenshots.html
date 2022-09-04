@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="7b3294362592ac0192046c381197c87a85312bbd61919f9e9e69399783e01d58.html">Prueba Sophos Flujo 2</a></span>
+                > <span class="truncate-60"><a
+                    href="2f95c25633789b2113a6164eb01eda2c5b557f9fdac08df78717ffaf0863c7bb.html">seleccionar fecha data picker </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 04-09-2022 11:22</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Prueba Sophos Flujo 2 </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">seleccionar fecha data picker
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given dado que el usuario &lt;firstName&gt; debe ingresar una fecha<br>When cuando el ingrese los datos &lt;year&gt; &lt;month&gt; &lt;day&gt; &lt;time&gt; en el datapicker<br>Then entonces se debera observar la fecha &lt;year&gt; &lt;month&gt; &lt;day&gt; &lt;time&gt; en el datapicker</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="c5458b457f8d37f76fb7a9e6c908f0bffda19b284da7432dc7ba5413959d4096.png" title=" 1: seleccionar fecha data picker ({firstName=&quot;Jonathan&quot;, year=&quot;2016&quot;, month=&quot;June&quot;, day=&quot;25&quot;, time=&quot;12:15&quot;})" width="1920"/>
+                <img src="c5458b457f8d37f76fb7a9e6c908f0bffda19b284da7432dc7ba5413959d4096.png" title=" When cuando el ingrese los datos &quot;2016&quot; &quot;June&quot; &quot;25&quot; &quot;12:15&quot; en el datapicker" width="1920"/>
+                <img src="c5458b457f8d37f76fb7a9e6c908f0bffda19b284da7432dc7ba5413959d4096.png" title=" Jonathan select data picker" width="1920"/>
+                <img src="c5458b457f8d37f76fb7a9e6c908f0bffda19b284da7432dc7ba5413959d4096.png" title=" Jonathan opens the Tools qa home page" width="1920"/>
+                <img src="c5458b457f8d37f76fb7a9e6c908f0bffda19b284da7432dc7ba5413959d4096.png" title=" Jonathan clicks on [By.xpath: (//div[@class='category-cards']//div[@class='card mt-4 top-card'])[4]]" width="1920"/>
+                <img src="5e43ebac930aed11e8b71719cd549c4dc0e672bad752b9adeb684084a538c3c3.png" title=" Jonathan clicks on [By.xpath: (//div[@class='category-cards']//div[@class='card mt-4 top-card'])[4]] (completed)" width="1920"/>
+                <img src="5e43ebac930aed11e8b71719cd549c4dc0e672bad752b9adeb684084a538c3c3.png" title=" Jonathan clicks on [By.xpath: //div[@class='element-list collapse show']//ul[@class='menu-list']//li[3]]" width="1920"/>
+                <img src="022ef411405b9fe7c67d893707f75accebd91d5b41673a63b3aae0ab578a59a1.png" title=" Jonathan clicks on [By.xpath: //div[@class='element-list collapse show']//ul[@class='menu-list']//li[3]] (completed)" width="1920"/>
+                <img src="022ef411405b9fe7c67d893707f75accebd91d5b41673a63b3aae0ab578a59a1.png" title=" Jonathan clicks on [By.id: datePickerMonthYearInput]" width="1920"/>
+                <img src="9057f330a45883eb54732eb4dd672db66e9c9d94a8a57cd4b0bfc33ef735c520.png" title=" Jonathan clicks on [By.id: datePickerMonthYearInput] (completed)" width="1920"/>
+                <img src="9057f330a45883eb54732eb4dd672db66e9c9d94a8a57cd4b0bfc33ef735c520.png" title=" Jonathan selects 2016" width="1920"/>
+                <img src="2a1f0695887dd37e6a453e6a9f0de28c3af24d377fa9e86e9206937e12d4c079.png" title=" Jonathan selects 2016 (completed)" width="1920"/>
+                <img src="2a1f0695887dd37e6a453e6a9f0de28c3af24d377fa9e86e9206937e12d4c079.png" title=" Jonathan selects June" width="1920"/>
+                <img src="c0f73cccee70ffcdada8a03d26f8a9c18edc9418a5bc90a1a914e430f8b1117b.png" title=" Jonathan selects June (completed)" width="1920"/>
+                <img src="c0f73cccee70ffcdada8a03d26f8a9c18edc9418a5bc90a1a914e430f8b1117b.png" title=" Jonathan clicks on [By.xpath: //div[contains(@class,'25')]]" width="1920"/>
+                <img src="dbf288d900982e429874f845fca88dbd14d4fcb8f11925dba28ffc4f217cdf91.png" title=" Jonathan clicks on [By.xpath: //div[contains(@class,'25')]] (completed)" width="1920"/>
+                <img src="dbf288d900982e429874f845fca88dbd14d4fcb8f11925dba28ffc4f217cdf91.png" title=" Jonathan clicks on [By.id: dateAndTimePickerInput]" width="1920"/>
+                <img src="63c695c029316d43798943a565574dcd3b1dea19ccd97579c6083a286168547a.png" title=" Jonathan clicks on [By.id: dateAndTimePickerInput] (completed)" width="1920"/>
+                <img src="63c695c029316d43798943a565574dcd3b1dea19ccd97579c6083a286168547a.png" title=" Jonathan clicks on [By.xpath: //span[@class='react-datepicker__year-read-view--selected-year']]" width="1920"/>
+                <img src="5efb9f8a7169e3f4f98071c103bb39b0dceaed218006399d3344e27a3a8023a7.png" title=" Jonathan clicks on [By.xpath: //span[@class='react-datepicker__year-read-view--selected-year']] (completed)" width="1920"/>
+                <img src="5efb9f8a7169e3f4f98071c103bb39b0dceaed218006399d3344e27a3a8023a7.png" title=" Jonathan select year data picker two" width="1920"/>
+                <img src="5efb9f8a7169e3f4f98071c103bb39b0dceaed218006399d3344e27a3a8023a7.png" title=" Jonathan clicks on [By.xpath: //div[@class='react-datepicker__year-option']//a[@class='react-datepicker__navigation react-datepicker__navigation--years react-datepicker__navigation--years-previous']]" width="1920"/>
+                <img src="9b1eb37fd0174423fe9f2f1940c77e346139943689c5c4c816edac9c52227555.png" title=" Jonathan clicks on [By.xpath: //div[@class='react-datepicker__year-option']//a[@class='react-datepicker__navigation react-datepicker__navigation--years react-datepicker__navigation--years-previous']] (completed)" width="1920"/>
+                <img src="9b1eb37fd0174423fe9f2f1940c77e346139943689c5c4c816edac9c52227555.png" title=" Jonathan clicks on [By.xpath: //div[@class='react-datepicker__year-option'][contains(.,'2016')]]" width="1920"/>
+                <img src="baaba41ed1f262292143960ec4ab606014f71d4a37ba11386239c6aaaf956021.png" title=" Jonathan clicks on [By.xpath: //div[@class='react-datepicker__year-option'][contains(.,'2016')]] (completed)" width="1920"/>
+                <img src="baaba41ed1f262292143960ec4ab606014f71d4a37ba11386239c6aaaf956021.png" title=" Jonathan select year data picker two (completed)" width="1920"/>
+                <img src="baaba41ed1f262292143960ec4ab606014f71d4a37ba11386239c6aaaf956021.png" title=" Jonathan clicks on [By.xpath: //span[@class='react-datepicker__month-read-view--selected-month']]" width="1920"/>
+                <img src="c44c9486e3ed99970a1441a76928ff0da825f5dbe19b5607cf8828e2fbcbcdf8.png" title=" Jonathan clicks on [By.xpath: //span[@class='react-datepicker__month-read-view--selected-month']] (completed)" width="1920"/>
+                <img src="c44c9486e3ed99970a1441a76928ff0da825f5dbe19b5607cf8828e2fbcbcdf8.png" title=" Jonathan clicks on [By.xpath: //div[@class='react-datepicker__month-option'][contains(.,'June')]]" width="1920"/>
+                <img src="efc2bfdc219dee737938f0eec62bfbcd68c66d508403e764f3c2a567c787f7af.png" title=" Jonathan clicks on [By.xpath: //div[@class='react-datepicker__month-option'][contains(.,'June')]] (completed)" width="1920"/>
+                <img src="efc2bfdc219dee737938f0eec62bfbcd68c66d508403e764f3c2a567c787f7af.png" title=" Jonathan clicks on [By.xpath: //div[contains(@class,'25')]]" width="1920"/>
+                <img src="ae2d266ae35a50f2436aa9795b547d9404262874789da709ad179c531f021585.png" title=" Jonathan clicks on [By.xpath: //div[contains(@class,'25')]] (completed)" width="1920"/>
+                <img src="ae2d266ae35a50f2436aa9795b547d9404262874789da709ad179c531f021585.png" title=" Jonathan select time data picker two" width="1920"/>
+                <img src="ae2d266ae35a50f2436aa9795b547d9404262874789da709ad179c531f021585.png" title=" Jonathan clicks on [By.xpath: //div[@class='react-datepicker__time-box']//ul[@class='react-datepicker__time-list']//li[contains(.,'12:15')]]" width="1920"/>
+                <img src="5ebf7ac65847b2358fcbbbf6488eb76353301cd3b7669cda1e2c9e63c856b558.png" title=" Jonathan clicks on [By.xpath: //div[@class='react-datepicker__time-box']//ul[@class='react-datepicker__time-list']//li[contains(.,'12:15')]] (completed)" width="1920"/>
+                <img src="5ebf7ac65847b2358fcbbbf6488eb76353301cd3b7669cda1e2c9e63c856b558.png" title=" Jonathan select time data picker two (completed)" width="1920"/>
+                <img src="5ebf7ac65847b2358fcbbbf6488eb76353301cd3b7669cda1e2c9e63c856b558.png" title=" Jonathan select data picker (completed)" width="1920"/>
+                <img src="5ebf7ac65847b2358fcbbbf6488eb76353301cd3b7669cda1e2c9e63c856b558.png" title=" When cuando el ingrese los datos &quot;2016&quot; &quot;June&quot; &quot;25&quot; &quot;12:15&quot; en el datapicker (completed)" width="1920"/>
+                <img src="5ebf7ac65847b2358fcbbbf6488eb76353301cd3b7669cda1e2c9e63c856b558.png" title=" Then entonces se debera observar la fecha &quot;2016&quot; &quot;June&quot; &quot;25&quot; &quot;12:15&quot; en el datapicker" width="1920"/>
+                <img src="5ebf7ac65847b2358fcbbbf6488eb76353301cd3b7669cda1e2c9e63c856b558.png" title=" Then Comparacion fecha uno should be '06/25/2016'" width="1920"/>
+                <img src="5ebf7ac65847b2358fcbbbf6488eb76353301cd3b7669cda1e2c9e63c856b558.png" title=" Then Comparacion fecha dos should be 'June 25, 2016 12:15 PM'" width="1920"/>
+                <img src="5ebf7ac65847b2358fcbbbf6488eb76353301cd3b7669cda1e2c9e63c856b558.png" title=" 1: seleccionar fecha data picker ({firstName=&quot;Jonathan&quot;, year=&quot;2016&quot;, month=&quot;June&quot;, day=&quot;25&quot;, time=&quot;12:15&quot;}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.2</span>
+</div>
+</body>
+</html>
